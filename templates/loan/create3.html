@@ -1,0 +1,229 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} 授信目录 {% endblock title %}
+
+{% block main_content %}
+
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">融资</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4> 融资 申请 - 手续费 </h4>
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+              
+              <form class="form-horizontal" action="POST">
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="bank_name">操作人 : </label> 
+                <div class="col-sm-9">曹美兰</div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">财务顾问费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>    
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">股东担保费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">前端费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">律师费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">手续费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">备用信用证手续费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">代理费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">咨询服务费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">资产管理费 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-sm-3" for="repay">其他 : </label> 
+                <div class="col-sm-9">
+                  <div class="col-sm-12">说明 ： <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
+                  <div class="col-sm-12">年华费率 : <input type="text" name="repay_date" value="3.2000%"></div>       
+                  <div class="col-sm-12">费用金额 : <input type="text" name="repay_date" value="30000"></div>
+                  <div class="col-sm-2"><label class="control-label" for="repay">付款 : </label></div>
+                  <div class="col-sm-10">
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-03-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-06-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>       
+                    <div class="col-sm-6">付款日子 ： <input type="date" name="repay_date" value="2017-09-10"></div>
+                    <div class="col-sm-6">付款金额 : <input type="text" name="repay_date" value="10000"></div> <br>
+                  </div>        
+                </div>
+              </div>
+
+              <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                      <button type="submit" class="btn btn-primary">Next 3</button>
+                      <button type="reset" class="btn btn-default">Reset</button>
+                      <a class="btn btn-danger" href="loan_list.html"> 融资 目录 </a>
+                    </div>
+                </div>
+            </form>
+
+              </div>
+              <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+  </div>
+</div>
+{% endblock main_content %}
+
+{% block extra_js %}
+
+  {% load staticfiles %}
+  <script src="{% static 'vendor/jquery/jquery.number.min.js' %}"></script>
+  <script type="text/javascript">
+    $('.number').number(true, 0);
+  </script>
+
+{% endblock extra_js %}

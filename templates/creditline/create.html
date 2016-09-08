@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} 授信目录 {% endblock title %}
+
+{% block main_content %}
+
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">授信</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4> 授信申请 </h4>
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                <form class="form-horizontal" action="POST">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">操作人 : </label> 
+                  <div class="col-sm-10">曹美兰</div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">银行名称 : </label> 
+                  <div class="col-sm-6"><input type="text" class="form-control" name="bank_name" value="光大银行"></div>
+                  <div class="col-sm-2"> <button>Search</button> </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bill_kind">货币种类 : </label> 
+                  <div class="col-sm-10">
+                    <label fclass="radio-inline"><input type="radio" name="bill_kind" value="RMB"> RMB </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label fclass="radio-inline"><input type="radio" name="bill_kind" value="USD"> USD </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="project_loan">项目贷款 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="project_loan" id="project_loan" value="180000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="longterm_amount">中长期流贷授信 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="longterm_amount" value="300000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="shortterm_amount">短期流贷授信 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="shortterm_amount" value="500000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="trade_amount">贸易融资授信 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="trade_amount" value="100000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="special_amount">专用授信 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="special_amount" value="160000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bond_amount">债券授信 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="bond_amount" value="160000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="extra_amount">其他 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control number" name="extra_amount" value="8000000"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="security_method">担保方式 : </label> 
+                  <div class="col-sm-10">
+                    <label class="radio-inline"><input type="radio" name="security_method" value="1"> 信用 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="security_method" value="2"> 抵押 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="security_method" value="3"> 质押 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="security_method" value="3"> 保证 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="security_method" value="3"> 其他 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="security_explain">担保说明 : </label> 
+                  <div class="col-sm-10"><textarea type="text" class="form-control" rows="3" name="security_explain"></textarea></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="contract_term">授信期间 : </label> 
+                  <div class="col-sm-10">
+                    <label class="radio-inline"><input type="radio" name="contract_term" value="1">1 Year </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="contract_term" value="2">2 Year </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label class="radio-inline"><input type="radio" name="contract_term" value="3">3 Year </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="contract_date">授信日子 : </label> 
+                  <div class="col-sm-10"><input type="date" class="form-control" name="contract_date" value="2016-09-06"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="board_decision">董事会决议交接情况 : </label> 
+                  <div class="col-sm-10"><input type="date" class="form-control" name="board_decision" value="2016-08-04"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="credit_grade">信用等级 : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control" name="credit_grade" value="AAA"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="remark">备注 : </label> 
+                  <div class="col-sm-10"><textarea type="text" class="form-control" rows="3" name="remark"></textarea></div>
+                </div>
+                <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                        <a class="btn btn-danger" href="{% url 'creditline:index' %}"> 授信目录 </a>
+                      </div>
+                  </div>
+              </form>  
+
+              </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+  </div>
+</div>
+{% endblock main_content %}
+
+{% block extra_js %}
+
+  {% load staticfiles %}
+  <script src="{% static 'vendor/jquery/jquery.number.min.js' %}"></script>
+  <script type="text/javascript">
+    $('.number').number(true, 0);
+  </script>
+
+{% endblock extra_js %}
