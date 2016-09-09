@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_bootstrap_calendar', # Calendar 
+    'djangobower',
+    'schedule',
     # 'crispy',
     'dashboard',
     'creditline',
@@ -127,7 +131,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_prd')
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_prod', 'static_root')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_all')]
 
 MEDIA_URL = '/media/'
@@ -138,3 +142,32 @@ LOGOUT_URL = '/accounts/logout/'
 LOGIN_REDIRECT_URL = '/post/'
 
 SITE_ID = 1
+
+# LOGGING = {
+#     'version' : 1,
+#     'disable_existing_loggers': False,
+#     'filters' : {
+#         'require_debug_false' : {
+#             '()': 'django.utils.log.RequireDebugFalse'
+#         }
+#     },
+#     'handlers' : {
+#         'mail_admins' : {
+#             'level' : 'ERROR',
+#             'filters' : ['require_debug_false'],
+#             'class' : 'django.utils.log.AmdinEmailHandler'
+#         }
+#     },
+#     'loggers' : {
+#         'django.request' : {
+#             'handlers' : ['mail_amdins'],
+#             'level' : 'ERROR',
+#             'propagate' : True,
+#         },
+#     }
+# }
+
+BOWER_INSTALLED_APPS = (
+        'jquery',
+        'bootstrap',
+    )
