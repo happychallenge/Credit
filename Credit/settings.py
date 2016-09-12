@@ -38,13 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'django_bootstrap_calendar', # Calendar 
-    'djangobower',
-    'schedule',
+    # 'calendar', # Calendar
+    # 'djangobower',
+    # 'schedule',
     # 'crispy',
     'dashboard',
     'creditline',
     'loan',
+    'event',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-KR'
 
 TIME_ZONE = 'UTC'
 

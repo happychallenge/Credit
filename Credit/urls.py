@@ -19,9 +19,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^calendar/', include('django_bootstrap_calendar.urls')),
-    url(r'^schedule/', include('schedule.urls')),
-    url(r'^pcalendar/', TemplateView.as_view(template_name='calendar/calendar.html'), name='pcalendar'),
+    url(r'^event/', include('event.urls', namespace='event')),
 
     url(r'^dashboard/', include('dashboard.urls', namespace='dashboard')),
     url(r'^creditline/', include('creditline.urls', namespace='creditline')),
