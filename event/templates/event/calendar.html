@@ -1,0 +1,49 @@
+{% extends 'home.html' %} 
+{% load i18n %}
+{% load bootstrap_calendar %}
+
+{% block main_content %}
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">Calendar</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4> Calendar - Event </h4>
+
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                <!-- container -->
+        				<div class="container">
+        				    <div class="span12">
+        				        {% bootstrap_controls 'from-inline pull-right' %}
+                        {% bootstrap_calendar_css %}
+                        {% bootstrap_calendar 'optional-css-classes' %}
+        				    </div>
+        				</div>
+        				<div class="clear-fix">
+        				</div>
+        				<div class="row">
+        				    <div class="span7">
+        				        {% bootstrap_calendar '' %}
+
+        				    </div>
+        				    <div class="span3">
+        				    </div>
+        				</div>
+                  
+              </div>
+
+		  </div>
+	  </div>
+  </div>
+</div>
+{% endblock main_content %}
+

@@ -76,7 +76,7 @@ $(function() {
         resize: true
     });
 
-    console.log("Before morris-bar-chart")
+    console.log("Before morris-bar-chart @@")
     Morris.Bar({
         element: 'morris-bar-chart',
         data: [{

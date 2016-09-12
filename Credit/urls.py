@@ -15,10 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^event/', include('event.urls', namespace='event')),
+
     url(r'^dashboard/', include('dashboard.urls', namespace='dashboard')),
     url(r'^creditline/', include('creditline.urls', namespace='creditline')),
     url(r'^loan/', include('loan.urls', namespace='loan')),
+
 ]
