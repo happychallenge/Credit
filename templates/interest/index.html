@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} 融资目录 {% endblock title %}
+
+{% block main_content %}
+
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">利息 </h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4> 利息 </h4>
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                  <a class="btn btn-primary" href="{% url 'loan:create1' %}"> 利息 </a> <br/>
+                <div class="container">
+                  <h3>利息</h3>
+                  <div class="table-responsive">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                      <tr>
+                        <th>银行名称</th>
+                        <th>提款日子</th>
+                        <th>提款金额</th>
+                        <th>付款日子</th>
+                        <th>利息详细</th>
+                        <th>利息금액</th>
+                        <th>부가세 6%</th>
+                        <th>부속세 (부가세의 12%)</th>
+                        <th>소득세 10%</th>
+                        <th>担当</th>
+                        <th>상태</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>光大银行 </td>
+                        <td>2016/9/10</td>
+                        <td class='number'>300000000</td>
+                        <td>2016/9/20</td>
+                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
+                        <td class='number'>=30000</td>
+                        <td class='number'>=1800</td>
+                        <td class='number'>=180</td>
+                        <td class='number'>=3000</td>
+                        <td></td>
+                        <td>납부 예정 </td>
+                      </tr>          
+                      <tr>
+                        <td>光大银行 </td>
+                        <td>2016/9/10</td>
+                        <td class='number'>300000000</td>
+                        <td>2016/9/20</td>
+                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
+                        <td class='number'>=30000</td>
+                        <td class='number'>=1800</td>
+                        <td class='number'>=180</td>
+                        <td class='number'>=3000</td>
+                        <td></td>
+                        <td>납부 예정 </td>
+                      </tr>          
+                      <tr>
+                        <td>光大银行 </td>
+                        <td>2016/9/10</td>
+                        <td class='number'>300000000</td>
+                        <td>2016/9/20</td>
+                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
+                        <td class='number'>=30000</td>
+                        <td class='number'>=1800</td>
+                        <td class='number'>=180</td>
+                        <td class='number'>=3000</td>
+                        <td></td>
+                        <td>납부 예정 </td>
+                      </tr>          
+                      <tr>
+                        <td>光大银行 </td>
+                        <td>2016/9/10</td>
+                        <td class='number'>300000000</td>
+                        <td>2016/9/20</td>
+                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
+                        <td class='number'>=30000</td>
+                        <td class='number'>=1800</td>
+                        <td class='number'>=180</td>
+                        <td class='number'>=3000</td>
+                        <td></td>
+                        <td>납부 예정 </td>
+                      </tr>          
+
+                    </tbody>
+                    </table>
+                   </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+  </div>
+</div>
+{% endblock main_content %}
+
+{% block extra_js %}
+
+  {% load staticfiles %}
+  <script src="{% static 'vendor/jquery/jquery.number.min.js' %}"></script>
+  <script type="text/javascript">
+    $('.number').number(true, 0);
+  </script>
+
+{% endblock extra_js %}

@@ -53,35 +53,7 @@
 
         {% block main_content %}
 
-            <div id="page-wrapper">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <h1 class="page-header">Calendar</h1>
-                  </div>
-                  <!-- /.col-lg-12 -->
-              </div>
-              <!-- /.row -->
-              <div class="row">
-                  <div class="col-lg-12">
-                      <div class="panel panel-default">
-                          <div class="panel-heading">
-                              <h4> Calendar - Event</h4>
-                          </div>
-                          <!-- /.panel-heading -->
-                          <div class="panel-body">
-                
-                            {% load bootstrap_calendar %}
-                            {% bootstrap_calendar_css %}
-                            {% bootstrap_calendar 'optional-css-classes' %}
 
-                          </div>
-                          <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-12 -->
-              </div>
-            </div>
          
         {% endblock main_content %}
         <!-- /#page-wrapper -->
@@ -102,8 +74,9 @@
     <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
 
     {% block extra_js %}
-            {% bootstrap_calendar_js language="template" %}
-            {% bootstrap_calendar_init language="template" %}
+        {% load bootstrap_calendar %}
+        {% bootstrap_calendar_js language="template" %}
+        {% bootstrap_calendar_init language="template" %}
     {% endblock extra_js %}
 </body>
 
