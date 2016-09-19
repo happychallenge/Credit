@@ -38,14 +38,21 @@
                     <div class="col-sm-6">偿还日子 : <input type="date" name="repay_date" value="2017-09-10"></div>
                     <div class="col-sm-6">偿还金额 : <input type="text" name="repay_amount" value="10000"></div> <br>
                   </div>
-                </div>    
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bill_kind">利息种类 : </label> 
+                  <div class="col-sm-10">
+                    <label fclass="radio-inline"><input type="radio" name="interest_kind" value="RMB"> 고정환율 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label fclass="radio-inline"><input type="radio" name="interest_kind" value="USD"> 변동환율 </label>
+                  </div>
+                </div>                
                 <div class="form-group">
                   <label class="control-label col-sm-3" for="repay">利息 : </label> 
                   <div class="col-sm-9">
                     <div class="col-sm-12">利息说明 : <textarea type="text" class="form-control" rows="2" name="security_explain"></textarea></div>
-                    <div class="col-sm-12">基础利率变化 : <input type="text" name="repay_date" value="3.5000%"></div> <br>        
-                    <div class="col-sm-12">展期原因变化 : <input type="" name="repay_date" value="1.2000%"></div>
-                    <div class="col-sm-12">其他原因变化 : <input type="text" name="repay_date" value="1.0000%"></div> <br>        
+                    <div class="col-sm-12">인민은행기준환율 : <input type="text" name="repay_date" value="3.5000%"></div> <br>        
+                    <div class="col-sm-12">할증 : <input type="" name="repay_date" value="1.2000%"></div>
+                    <div class="col-sm-12">LIBOR : <input type="text" name="repay_date" value="1.0000%"></div> <br>        
                   </div>
                 </div>
                 <div class="form-group">
@@ -59,7 +66,7 @@
                 <div class="form-group">
                   <label class="control-label col-sm-3" for="security_method">利息支付日子 : </label> 
                   <div class="col-sm-9">
-                    <input type="text" name="repay_amount" value="25"> 日
+                    <input type="text" name="repay_amount" value="20"> 日
                   </div>
                 </div>
                 <div class="form-group">
@@ -86,7 +93,7 @@
                       <div class="col-sm-offset-2 col-sm-10">
                         <button type="submit" class="btn btn-primary">Next 3</button>
                         <button type="reset" class="btn btn-default">Reset</button>
-                        <a class="btn btn-danger" href="loan3_finish.html"> TEST NEXT 3 </a>
+                        <a class="btn btn-danger" href="{% url 'loan:create3' %}"> TEST NEXT 3 </a>
                       </div>
                   </div>
               </form>

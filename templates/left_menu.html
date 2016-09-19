@@ -46,11 +46,14 @@
                 <a href="#"><i class="fa fa-thumb-tack fa-fw"></i> 利息管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{% url 'loan:index' %}">利息目录</a>
+                        <a href="{% url 'interest:index' %}">要付利息目录</a>
                     </li>
                     <li>
-                        <a href="{% url 'loan:create1' %}">利息申请</a>
+                        <a href="{% url 'interest:create' %}">计算利息目录</a>
                     </li>
+                    <li>
+                        <a href="{% url 'interest:history' %}">历史利息目录</a>
+                    </li>                    
                 </ul>
                 <!-- /.nav-second-level -->
             </li>            
