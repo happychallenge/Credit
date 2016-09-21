@@ -23,9 +23,10 @@
                 <!-- container -->
         				<div class="container">
         				    <div class="span12">
-        				        {% bootstrap_controls 'pull-right' %}
+        				        {# {% bootstrap_controls 'pull-right' %} #}
+                        {% include 'event/partial/calendar_controls.html' %}
                         {% bootstrap_calendar_css %}
-                        {% bootstrap_calendar 'optional-css-classes' %}
+                        {% bootstrap_calendar '' %}
         				    </div>
         				</div>
         				<div class="clear-fix">
