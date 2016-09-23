@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %} 银行目录 {% endblock title %}
+
+{% block main_content %}
+
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">银行</h1>
+      </div>
+      <!-- /.col-lg-12 -->
+  </div>
+  <!-- /.row -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">
+                  <h4> 银行申请 </h4>
+              </div>
+              <!-- /.panel-heading -->
+              <div class="panel-body">
+                <form class="form-horizontal" action="POST">
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">操作人 : </label> 
+                  <div class="col-sm-10">曹美兰</div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">银行名称(中文) : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control" name="bank_chinese" value="光大银行"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">银行名称(英文) : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control" name="bank_english" value="CCBB"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">银行帐户(公司): </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control" name="bank_english" value="123456-1234-12340899"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="bank_name">利息付款账户(对方) : </label> 
+                  <div class="col-sm-10"><input type="text" class="form-control" name="bank_english" value="098765-4321-12340899"></div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2" for="remark">备注 : </label> 
+                  <div class="col-sm-10"><textarea type="text" class="form-control" rows="3" name="remark"></textarea></div>
+                </div>
+                <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                        <a class="btn btn-danger" href="{% url 'creditline:index' %}"> 授信目录 </a>
+                      </div>
+                  </div>
+              </form>  
+
+              </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+  </div>
+</div>
+{% endblock main_content %}
+
+{% block extra_js %}
+
+  {% load staticfiles %}
+  <script src="{% static 'vendor/jquery/jquery.number.min.js' %}"></script>
+  <script type="text/javascript">
+    $('.number').number(true, 0);
+  </script>
+
+{% endblock extra_js %}

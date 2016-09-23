@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'creditline',
     'loan',
     'event',
+    'interest',
+    'master',
 ]
 
 MIDDLEWARE = [
