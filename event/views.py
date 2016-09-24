@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.http import request
+from django.shortcuts import render
 
 __author__ = 'sandlbn and w3lly'
 
@@ -18,6 +19,12 @@ class CalendarView(TemplateView):
     #     # Add in a QuerySet of all the books
     #     request.session['today'] = datetime.date.today()
     #     return context
+
+def event_calendar(request):
+    template_name = 'event/calendar.html'
+    today = datetime.datetime.now()
+    context = { 'today': today}
+    return render(request, template_name, context)
 
 class CalendarJsonListView(ListView):
     template_name = 'event/calendar_events.html'
