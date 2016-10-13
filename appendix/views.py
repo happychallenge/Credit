@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+# 커멘트 추가
 # Create your views here.
 def index(request):
 	template = 'appendix/index.html'
