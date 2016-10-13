@@ -2,31 +2,26 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-	template = 'loan/index.html'
+	template = 'appendix/index.html'
 	context = {}
 	return render(request, template, context)
 
-def create1(request):
-	template = 'loan/create1.html'
+def create(request):
+	template = 'appendix/create.html'
 	context = {}
 	return render(request, template, context)
 
-def create2(request):
-	template = 'loan/create2.html'
-	context = {}
-	return render(request, template, context)
-
-def create3(request):
-	template = 'loan/create3.html'
+def history(request):
+	template = 'appendix/history.html'
 	context = {}
 	return render(request, template, context)
 
 def detail(request, pk):
-	template = 'loan/detail.html'
+	template = 'appendix/create.html'
 	context = {}
 	return render(request, template, context)
 
-def append(request):
-	template = 'loan/append.html'
+def change(request):
+	template = 'appendix/change.html'
 	context = {}
 	return render(request, template, context)

@@ -22,53 +22,127 @@
                 <a href="#"><i class="fa fa-bank fa-fw"></i> 授信管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{% url 'creditline:index' %}">授信目录</a>
+                        <a href="{% url 'creditline:index' %}">授信目录(Active)</a>
                     </li>
                     <li>
                         <a href="{% url 'creditline:create' %}">授信申请</a>
                     </li>
-                </ul>
-                <!-- /.nav-second-level -->
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-table fa-fw"></i> 融资管理 <span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
                     <li>
-                        <a href="{% url 'loan:index' %}">融资目录</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'loan:create1' %}">融资申请</a>
+                        <a href="{% url 'creditline:history' %}">授信目录(History)</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="#"><i class="fa fa-thumb-tack fa-fw"></i> 利息管理 <span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-sitemap fa-fw"></i> 授信使用 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{% url 'interest:index' %}">要付利息目录</a>
+                        <a href="#"><i class="fa fa-align-justify fa-fw"></i>融资 <span class="fa arrow"></span></a>   
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="{% url 'loan:index' %}">目录</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'loan:create1' %}">新增</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-folder-o fa-fw"></i>补充协议 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-fourth-level">
+                                    <li>
+                                        <a href="{% url 'appendix:index' %}">目录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'appendix:index' %}">新增</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-folder-o fa-fw"></i>利息 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-fourth-level">
+                                    <li>
+                                        <a href="{% url 'interest:index' %}">历史目录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'interest:index' %}">要付目录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'interest:create' %}">利息计算</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-folder-o fa-fw"></i>手续费 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-fourth-level">
+                                    <li>
+                                        <a href="{% url 'loan:append' %}">目录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'loan:index' %}">新增</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-folder-o fa-fw"></i>偿还 <span class="fa arrow"></span></a>
+                                <ul class="nav nav-fourth-level">
+                                    <li>
+                                        <a href="{% url 'loan:append' %}">目录</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'loan:index' %}">业务处理</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!-- /.nav-third-level -->
                     </li>
-                    <li>
-                        <a href="{% url 'interest:create' %}">计算利息目录</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'interest:history' %}">历史利息目录</a>
-                    </li>                    
                 </ul>
-                <!-- /.nav-second-level -->
-            </li>            
-            <li>
-                <a href="#"><i class="fa fa-magnet fa-fw"></i> 偿还管理 <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="{% url 'loan:index' %}">偿还目录</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'loan:create1' %}">偿还申请</a>
+                        <a href="#"><i class="fa fa-align-justify fa-fw"></i>信用证 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">目录</a>
+                            </li>
+                            <li>
+                                <a href="#">新增</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
                     </li>
                 </ul>
-                <!-- /.nav-second-level -->
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#"><i class="fa fa-align-justify fa-fw"></i>银行承兑汇票 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">目录</a>
+                            </li>
+                            <li>
+                                <a href="#">新增</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="#"><i class="fa fa-align-justify fa-fw"></i>其他 <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level">
+                            <li>
+                                <a href="#">目录</a>
+                            </li>
+                            <li>
+                                <a href="#">新增</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-third-level -->
+                    </li>
+                </ul>
+
             </li>
+
+
             <li>
                 <a href="#"><i class="fa fa-magnet fa-fw"></i> Master <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">

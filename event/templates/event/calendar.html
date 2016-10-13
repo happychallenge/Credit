@@ -1,4 +1,4 @@
-{% extends 'home.html' %} 
+{% extends 'base.html' %} 
 {% load i18n %}
 {% load bootstrap_calendar %}
 
@@ -46,3 +46,8 @@
 </div>
 {% endblock main_content %}
 
+{% block extra_js %}
+    {% load bootstrap_calendar %}
+    {% bootstrap_calendar_js language="template" %}
+    {% bootstrap_calendar_init language="template" %}
+{% endblock extra_js %}

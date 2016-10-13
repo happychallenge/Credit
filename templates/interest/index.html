@@ -22,7 +22,6 @@
               </div>
               <!-- /.panel-heading -->
               <div class="panel-body">
-                  <a class="btn btn-primary" href="{% url 'loan:create1' %}"> 利息 </a> <br/>
                 <div class="container">
                   <h3>利息</h3>
                   <div class="table-responsive">
@@ -30,71 +29,146 @@
                     <thead>
                       <tr>
                         <th>银行名称</th>
-                        <th>提款日子</th>
                         <th>提款金额</th>
                         <th>付款日子</th>
                         <th>利息详细</th>
-                        <th>利息금액</th>
-                        <th>부가세 6%</th>
-                        <th>부속세 (부가세의 12%)</th>
-                        <th>소득세 10%</th>
+
+                        <th>利息金额(A)</th>
+                        <th>加减点数(B)</th>
+                        <th>利息合计(A+B)</th>
+
+                        <th>营业税(C)</th>
+                        <th>附加税(D)</th>
+                        <th>所得税(E)</th>
+                        <th>其他(F)</th>
+                        <th>合计丽东承担税(C+D+E+F)</th>
+
                         <th>担当</th>
-                        <th>상태</th>
+                        <th>处理情况</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>光大银行 </td>
-                        <td>2016/9/10</td>
-                        <td class='number'>300000000</td>
-                        <td>2016/9/20</td>
-                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
-                        <td class='number'>=30000</td>
-                        <td class='number'>=1800</td>
-                        <td class='number'>=180</td>
-                        <td class='number'>=3000</td>
-                        <td></td>
-                        <td>납부 예정 </td>
+                        <td rowspan=2>光大银行 </td>
+                        <td rowspan=2 class='number'>70000000</td>
+                        <td rowspan=2 >2016/9/20</td>
+                        <td rowspan=2 >基准利率 : 3.4000%<br> 加减点数 : 10% <br> LIBOR : 0%</td>
+
+                        <td>3.4000%</td>
+                        <td>1.2000%</td>
+                        <td>4.6000%</td>
+
+                        <td>1.4000%</td>
+                        <td>0.3000%</td>
+                        <td>0.3000%</td>
+                        <td>0.4000%</td>
+                        <td>2.4000%</td>
+
+                        <td rowspan=2 >纪玉奎</td>
+                        <td rowspan=2 >已经付款 </td>
                       </tr>          
                       <tr>
-                        <td>光大银行 </td>
-                        <td>2016/9/10</td>
-                        <td class='number'>300000000</td>
-                        <td>2016/9/20</td>
-                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
-                        <td class='number'>=30000</td>
-                        <td class='number'>=1800</td>
-                        <td class='number'>=180</td>
-                        <td class='number'>=3000</td>
-                        <td></td>
-                        <td>납부 예정 </td>
+                        <td class='number'>1983333</td>
+                        <td class='number'>700000</td>
+                        <td class='number'>268333</td>
+
+                        <td class='number'>81666</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>23333</td>
+                        <td class='number'>140000</td>
+                      </tr>          
+
+                      <tr>
+                        <td rowspan=2>交通银行 </td>
+                        <td rowspan=2 class='number'>70000000</td>
+                        <td rowspan=2 >2016/9/20</td>
+                        <td rowspan=2 >基准利率 : 3.4000%<br> 加减点数 : 10% <br> LIBOR : 0%</td>
+
+                        <td>3.4000%</td>
+                        <td>1.2000%</td>
+                        <td>4.6000%</td>
+
+                        <td>1.4000%</td>
+                        <td>0.3000%</td>
+                        <td>0.3000%</td>
+                        <td>0.4000%</td>
+                        <td>2.4000%</td>
+
+                        <td rowspan=2 >纪玉奎</td>
+                        <td rowspan=2 >已经付款 </td>
                       </tr>          
                       <tr>
-                        <td>光大银行 </td>
-                        <td>2016/9/10</td>
-                        <td class='number'>300000000</td>
-                        <td>2016/9/20</td>
-                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
-                        <td class='number'>=30000</td>
-                        <td class='number'>=1800</td>
-                        <td class='number'>=180</td>
-                        <td class='number'>=3000</td>
-                        <td></td>
-                        <td>납부 예정 </td>
+                        <td class='number'>1983333</td>
+                        <td class='number'>700000</td>
+                        <td class='number'>268333</td>
+
+                        <td class='number'>81666</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>23333</td>
+                        <td class='number'>140000</td>
+                      </tr>   
+                      <tr>
+                        <td rowspan=2>工商银行 </td>
+                        <td rowspan=2 class='number'>70000000</td>
+                        <td rowspan=2 >2016/9/20</td>
+                        <td rowspan=2 >基准利率 : 3.4000%<br> 加减点数 : 10% <br> LIBOR : 0%</td>
+
+                        <td>3.4000%</td>
+                        <td>1.2000%</td>
+                        <td>4.6000%</td>
+
+                        <td>1.4000%</td>
+                        <td>0.3000%</td>
+                        <td>0.3000%</td>
+                        <td>0.4000%</td>
+                        <td>2.4000%</td>
+
+                        <td rowspan=2 >纪玉奎</td>
+                        <td rowspan=2 >已经付款 </td>
                       </tr>          
                       <tr>
-                        <td>光大银行 </td>
-                        <td>2016/9/10</td>
-                        <td class='number'>300000000</td>
-                        <td>2016/9/20</td>
-                        <td>기준환율 : 5.3000%<br> 할증 : 10% <br> LIBOR : 0%</td>
-                        <td class='number'>=30000</td>
-                        <td class='number'>=1800</td>
-                        <td class='number'>=180</td>
-                        <td class='number'>=3000</td>
-                        <td></td>
-                        <td>납부 예정 </td>
+                        <td class='number'>1983333</td>
+                        <td class='number'>700000</td>
+                        <td class='number'>268333</td>
+
+                        <td class='number'>81666</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>23333</td>
+                        <td class='number'>140000</td>
+                      </tr>   
+                      <tr>
+                        <td rowspan=2>光大银行 </td>
+                        <td rowspan=2 class='number'>70000000</td>
+                        <td rowspan=2 >2016/9/20</td>
+                        <td rowspan=2 >基准利率 : 3.4000%<br> 加减点数 : 10% <br> LIBOR : 0%</td>
+
+                        <td>3.4000%</td>
+                        <td>1.2000%</td>
+                        <td>4.6000%</td>
+
+                        <td>1.4000%</td>
+                        <td>0.3000%</td>
+                        <td>0.3000%</td>
+                        <td>0.4000%</td>
+                        <td>2.4000%</td>
+
+                        <td rowspan=2 >纪玉奎</td>
+                        <td rowspan=2 >已经付款 </td>
                       </tr>          
+                      <tr>
+                        <td class='number'>1983333</td>
+                        <td class='number'>700000</td>
+                        <td class='number'>268333</td>
+
+                        <td class='number'>81666</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>23333</td>
+                        <td class='number'>140000</td>
+                      </tr>   
 
                     </tbody>
                     </table>
