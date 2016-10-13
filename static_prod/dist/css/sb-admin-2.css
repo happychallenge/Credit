@@ -90,7 +90,8 @@ body {
   content: "\f107";
 }
 .sidebar .nav-second-level li,
-.sidebar .nav-third-level li {
+.sidebar .nav-third-level li,
+.sidebar .nav-fourth-level li{
   border-bottom: none !important;
 }
 .sidebar .nav-second-level li a {

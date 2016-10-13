@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^dashboard/', include('dashboard.urls', namespace='dashboard')),
     url(r'^creditline/', include('creditline.urls', namespace='creditline')),
     url(r'^loan/', include('loan.urls', namespace='loan')),
+    url(r'^appendix/', include('appendix.urls', namespace='appendix')),
     url(r'^interest/', include('interest.urls', namespace='interest')),
     url(r'^master/', include('master.urls', namespace='master')),
 

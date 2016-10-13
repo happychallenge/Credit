@@ -44,12 +44,12 @@
                   <div class="col-sm-9">변동환율</div>
                 </div>
                 <div class="form-group">
-                  <label class="control-label col-sm-3" for="loan_amount">인민은행기준율 %: </label> 
-                  <div class="col-sm-8"><input type="text" class="form-control" name="loan_amount" value="3.5000"></div>
+                  <label class="control-label col-sm-3" for="loan_amount">基准利率 %: </label> 
+                  <div class="col-sm-8"><input type="text" class="form-control" name="loan_amount" value="3.4000"></div>
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label col-sm-3" for="repay">이자 계산 : </label> 
+                  <label class="control-label col-sm-3" for="repay">利息 计算: </label> 
                   <div class="col-sm-9">
                     <div class="col-sm-12">
                       <div class="col-sm-4">변동이자율 ： <input type="text" name="repay_date" value="3.5000">%</div>
@@ -80,11 +80,12 @@
                 </div>
 
                 <div class="form-group">
-                  <label class="control-label col-sm-3" for="bill_kind">세금 부담 : </label> 
+                  <label class="control-label col-sm-3" for="bill_kind">税计算 : </label> 
                   <div class="col-sm-9">
-                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="RMB"> 부가세 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="USD"> 부속세 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="USD"> 소득세 </label> 
+                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="RMB"> 营业税 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="USD"> 附加税 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="USD"> 所得税 </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label fclass="check-inline"><input type="checkbox" name="bill_kind" value="USD"> 其他 </label> 
                   </div>
                 </div>
 
@@ -105,39 +106,62 @@
               </div>
               <div class="panel-body">
               
-                <form class="form-horizontal" action="POST">
-                {% csrf_token %}
+                  <div class="table-responsive">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                    <thead>
+                      <tr>
+                        <th>银行名称</th>
+                        <th>提款金额</th>
+                        <th>付款日子</th>
+                        <th>利息详细</th>
 
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="credit_id">利息金额 : </label> 
-                  <div class="col-sm-9 number">50000</div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="credit_id">부가세 : </label> 
-                  <div class="col-sm-9 number">3000</div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="credit_id">부속세 : </label> 
-                  <div class="col-sm-9 number">360</div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="credit_id">소득세 : </label> 
-                  <div class="col-sm-9 number">500</div>
-                </div>
+                        <th>利息金额(A)</th>
+                        <th>加减点数(B)</th>
+                        <th>利息合计(A+B)</th>
 
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="loan_date">전체 비용 : </label> 
-                  <div class="col-sm-9 number">53860</div>
-                </div>
+                        <th>营业税(C)</th>
+                        <th>附加税(D)</th>
+                        <th>所得税(E)</th>
+                        <th>其他(F)</th>
+                        <th>合计丽东承担税(C+D+E+F)</th>
 
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="loan_date1">은행 청구 이자 : </label> 
-                  <div class="col-sm-9 number">  <input type="text" class="form-control" name="interest" value="53870"> </div>
-                </div>
+                        <th>担当</th>
+                        <th>处理情况</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td rowspan=2>光大银行 </td>
+                        <td rowspan=2 class='number'>70000000</td>
+                        <td rowspan=2 >2016/9/20</td>
+                        <td rowspan=2 >基准利率 : 3.4000%<br> 加减点数 : 10% <br> LIBOR : 0%</td>
 
-                <div class="form-group">
-                  <label class="control-label col-sm-3" for="loan_date2">차액 : </label> 
-                  <div class="col-sm-9 number"><input type="text" class="form-control" name="difference" value="10"> </div>
+                        <td>3.4000%</td>
+                        <td>1.2000%</td>
+                        <td>4.6000%</td>
+
+                        <td>1.4000%</td>
+                        <td>0.3000%</td>
+                        <td>0.3000%</td>
+                        <td>0.4000%</td>
+                        <td>2.4000%</td>
+
+                        <td rowspan=2 >纪玉奎</td>
+                        <td rowspan=2 >已经付款 </td>
+                      </tr>          
+                      <tr>
+                        <td class='number'>1983333</td>
+                        <td class='number'>700000</td>
+                        <td class='number'>268333</td>
+
+                        <td class='number'>81666</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>17500</td>
+                        <td class='number'>23333</td>
+                        <td class='number'>140000</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
 
               <!-- /.panel-body -->

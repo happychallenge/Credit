@@ -11,12 +11,17 @@ def create(request):
 	context = {}
 	return render(request, template, context)
 
+def history(request):
+	template = 'creditline/history.html'
+	context = {}
+	return render(request, template, context)
+
 def detail(request, pk):
 	template = 'creditline/create.html'
 	context = {}
 	return render(request, template, context)
 
-def finish(request):
-	template = 'creditline/finish.html'
+def change(request):
+	template = 'creditline/change.html'
 	context = {}
 	return render(request, template, context)

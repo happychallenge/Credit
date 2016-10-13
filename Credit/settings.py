@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'event',
     'interest',
     'master',
+    'appendix',
 ]
 
 MIDDLEWARE = [
@@ -134,7 +135,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap'
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_prod', 'static_root')
+STATIC_ROOT = os.path.join(os.path.join(BASE_DIR), 'static_prod')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static_all')]
 
 MEDIA_URL = '/media/'

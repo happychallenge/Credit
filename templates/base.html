@@ -52,9 +52,7 @@
         </nav>
 
         {% block main_content %}
-            {% load bootstrap_calendar %}
-            {% bootstrap_calendar_css %}
-            {% bootstrap_calendar 'optional-css-classes' %}
+
         {% endblock main_content %}
         <!-- /#page-wrapper -->
 
@@ -74,8 +72,7 @@
     <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
 
     {% block extra_js %}
-            {% bootstrap_calendar_js language="template" %}
-            {% bootstrap_calendar_init language="template" %}
+
     {% endblock extra_js %}
 </body>
 
