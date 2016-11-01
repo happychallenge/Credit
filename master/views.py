@@ -27,7 +27,7 @@ def creditgradecreate(request):
 	context = {}
 	return render(request, template, context)
 
-def creditgradedetail(request, pk):
-	template = 'master/creditgradecreate.html'
+def exchangerate(request):
+	template = 'master/exchangerate.html'
 	context = {}
 	return render(request, template, context)
